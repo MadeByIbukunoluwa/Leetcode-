@@ -75,7 +75,7 @@
 // }
 
 // Fixed the problem stated above 
-function findTheArrayConcVal(nums: number[]): number {
+function findTheArrayConcVal1(nums: number[]): number {
     let concatVal = 0
     let p1 = 0
     let p2 = nums.length - 1  
@@ -96,6 +96,38 @@ function findTheArrayConcVal(nums: number[]): number {
     }
     return concatVal 
 };
+
+// The time was poor as this was my stats  so i tried to modify it a bit but the outcome was still similar
+
+//Runtime
+// 154 ms
+// Beats
+// 9.52%
+// Memory
+// 50.7 MB
+// Beats
+// 6.35%
+
+function findTheArrayConcVal2(nums: number[]): number {
+    let concatVal = 0
+    let p1 = 0
+    let p2 = nums.length - 1  
+    while (p1 < nums.length) {
+        console.log(p1,p2)
+         if (p1 === p2) {
+             return concatVal += nums[p1]
+         }
+        concatVal += Number(String(nums[p1]) +  String(nums[p2]))
+         if (p1 + 1 === p2 || p2 - 1 === p1) {
+             return concatVal
+         }
+        p1++
+        p2--
+    }
+    return concatVal 
+};
+
+
 
 
 // This was the only .ts solution
