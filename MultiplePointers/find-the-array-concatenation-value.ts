@@ -96,3 +96,34 @@ function findTheArrayConcVal(nums: number[]): number {
     }
     return concatVal 
 };
+
+
+// This was the only .ts solution
+// const findTheArrayConcVal = (nums: number[]): number => {
+//   let bellyButton =
+//     nums.length % 2 === 1 ? nums[Math.trunc(nums.length / 2)] : 0;
+//   let head = 0;
+//   let tail = nums.length - 1;
+//   while (head < tail) {
+//     const stapledNum = Number(String(nums[head] + String(nums[tail])));
+//     bellyButton += stapledNum;
+//     head++;
+//     tail--;
+//   }
+//   return bellyButton;
+// };
+
+// this was the highest rated c++ approach
+// class Solution {
+// public:
+//     long long findTheArrayConcVal(vector<int>& nums) {
+//         long long ans  = 0;
+//         int n = nums.size();
+//         for(int i = 0; i < n/2; ++i){
+//             string t = to_string(nums[i]) + to_string(nums[n - i - 1]);
+//             ans += stol(t);
+//         }
+//         if(n % 2) ans += nums[n/2];
+//         return ans;
+//     }
+// };
