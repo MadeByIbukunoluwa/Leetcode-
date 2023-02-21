@@ -76,3 +76,22 @@ function getCommon(nums1: number[], nums2: number[]): number {
 // 60 MB
 // Beats
 // 21.33%
+
+
+// i came across a unique solution using sets 
+// var getCommon = function (nums1, nums2) {
+//   let nums1Set = new Set(nums1);
+//   let nums2Set = new Set(nums2);
+
+//   if (nums1.length < nums2.length) {
+//     for (let num of nums1Set) {
+//       if (nums2Set.has(num)) return num;
+//     }
+//   } else {
+//     for (let num of nums2Set) {
+//       if (nums1Set.has(num)) return num;
+//     }
+//   }
+
+//   return -1;
+// };
