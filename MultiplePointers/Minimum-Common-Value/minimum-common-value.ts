@@ -95,3 +95,17 @@ function getCommon(nums1: number[], nums2: number[]): number {
 
 //   return -1;
 // };
+
+// i also saw this one using a frequencyCounter , i thought of using that 
+// var getCommon = function (nums1, nums2) {
+//   let obj = {};
+//   for (let i = 0; i < nums1.length; i++) {
+//     obj[nums1[i]] = 1;
+//   }
+//   for (let i = 0; i < nums2.length; i++) {
+//     if (obj[nums2[i]]) {
+//       return nums2[i];
+//     }
+//   }
+//   return -1;
+// };
