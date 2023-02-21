@@ -65,3 +65,14 @@ function getCommon(nums1: number[], nums2: number[]): number {
 // I also figured out that i didn't need to get the length of the longer array (len) so i removed it 
 // i also modifed the return statemnet to only return -1, without the || operator 
 // I just have to make sure that the pointers for each array should not exceed the array length 
+
+// outcome - the runtime was poor, and it used a lot of memory 
+
+// Runtime
+// 435 ms
+// Beats
+// 10.67%
+// Memory
+// 60 MB
+// Beats
+// 21.33%
