@@ -40,12 +40,12 @@ function getCommon(nums1: number[], nums2: number[]): number {
         let p1 = 0
         let p2 = 0 
         
-        let nums1length = nums1.length
-        let nums2length = nums2.length
+        // let nums1length = nums1.length
+        // let nums2length = nums2.length
 
-        let len = nums1length > nums2length ? nums1length : nums2length
-        console.log('len',len)
-        while (p1 < len) {
+        // let len = nums1length > nums2length ? nums1length : nums2length
+        // console.log('len',len)
+        while (p1 < nums1.length && p2 < nums2.length) {
             if (nums1[p1] === nums2[p2]) {
                 return nums1[p1]
             }
@@ -57,5 +57,11 @@ function getCommon(nums1: number[], nums2: number[]): number {
         }
         // console.log(p1,p2)
         console.log(nums1,p1)
-    return nums1[p1] || -1
+    return -1
 };
+
+// And then i figured out for a case like this [3,5],[2] , the two arrays will not fulfill the first 2 conditions , making p2 , the second pointer increment to infinity
+
+// I also figured out that i didn't need to get the length of the longer array (len) so i removed it 
+// i also modifed the return statemnet to only return -1, without the || operator 
+// I just have to make sure that the pointers for each array should not exceed the array length 
