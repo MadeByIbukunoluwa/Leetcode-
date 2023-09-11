@@ -1,4 +1,4 @@
-lass Solution {
+class Solution {
   bool isAnagram(String s, String t) {
       if (s.length != t.length) return false;
      Map<String,int> dict1 = new Map<String,int>();

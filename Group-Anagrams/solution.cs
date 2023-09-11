@@ -13,6 +13,7 @@ public class Solution
                 arr[ch - 'a']++;
             }
             string key = string.Join(string.Empty, arr);
+            
             Console.WriteLine(key);
             if (!dict.ContainsKey(key))
             {
